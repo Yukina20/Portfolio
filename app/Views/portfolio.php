@@ -21,7 +21,7 @@
     <h2>Présentation</h2>
     <div class="intro">
         <img src="../../images/photo-profil.jpg" alt="Photo de profil" class="photo-profil">
-        <p>Bonjour, je suis Victoria Dubuc, étudiante en dernière année de BTS SIO, spécialité SISR. Passionnée par les technologies de l'information, je me suis spécialisée dans le développement d'applications web, la gestion des bases de données et la création de solutions interactives. Mon parcours m'a permis de travailler sur divers projets, dont une application de prévention pour les jeunes conducteurs et un quiz de prévention des risques sonores.</p>
+        <p>Bonjour, je suis Victoria Dubuc, étudiante en dernière année de BTS SIO, spécialité SLAM. Passionnée par les technologies de l'information, je me suis spécialisée dans le développement d'applications web, la gestion des bases de données et la création de solutions interactives. Mon parcours m'a permis de travailler sur divers projets, dont une application de prévention pour les jeunes conducteurs et un quiz de prévention des risques sonores.</p>
     </div>
     <div class="links">
         <p>Vous pouvez consulter mes travaux sur :</p>
