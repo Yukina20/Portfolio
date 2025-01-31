@@ -1,0 +1,164 @@
+/* Styles de base */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    overflow: hidden; /* Masquer le débordement */
+    scroll-behavior: smooth; /* Ajout de défilement fluide */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+/* Styles pour l'en-tête */
+header {
+    background: #4A90E2;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+    height: 100vh; /* Prendre toute la hauteur de l'écran */
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+/* Styles pour les sections */
+.section {
+    height: 100vh; /* Prendre toute la hauteur de l'écran */
+    text-align: center;
+    transition: background 0.3s ease; /* Transition douce pour l'arrière-plan */
+}
+
+/* Couleurs pour chaque section */
+#about {
+    background: #f9f9f9;
+}
+
+#projects {
+    background: #ffffff;
+}
+
+#skills {
+    background: #f9f9f9;
+}
+
+/* Styles pour les titres */
+.section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #4A90E2;
+}
+
+/* Styles pour les cartes de projet */
+.projects-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    flex-basis: calc(30% - 40px); /* 3 cartes par ligne */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Styles pour les listes de compétences */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 10px 0;
+    font-size: 1.2em;
+}
+
+/* Styles pour le pied de page */
+footer {
+    background: #4A90E2;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Styles pour le bouton "Haut" */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #4A90E2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    display: none; /* Cacher par défaut */
+}
+
+#scrollTopBtn:hover {
+    background: #357ABD;
+}
+
+/* Section Veille Technologique */
+#veille-techno .articles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.article-card {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+}
+
+.article-link {
+    text-decoration: none;
+    color: #333;
+}
+
+.article-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.article-card h3 {
+    margin: 15px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.article-card p {
+    margin: 0 15px 15px;
+    color: #666;
+}
