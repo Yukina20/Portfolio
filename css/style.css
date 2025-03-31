@@ -1,164 +1,695 @@
-/* Styles de base */
+/* ========== 1. STYLES GLOBAUX ========== */
+
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    color: #333;
-    overflow: hidden; /* Masquer le débordement */
-    scroll-behavior: smooth; /* Ajout de défilement fluide */
+    color: #333; /* Texte en gris foncé */
+    background: #ffffff; /* Fond blanc */
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
+/* Conteneur général */
 .container {
     width: 80%;
     margin: auto;
 }
 
-/* Styles pour l'en-tête */
+/* ========== 2. NAVIGATION ========== */
+
+/* ========== 2. NAVIGATION ========== */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #005A8D;
+    color: #F8F8F8; /* Blanc cassé */
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+nav ul li:first-child {
+    color: #E6C07E; /* Doré pour le prénom */
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: 30px; /* Décalage du texte du bord */
+    margin-right: 450px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #F8F8F8; /* Blanc cassé */
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+
+/* ========== 3. EN-TÊTE ========== */
+
 header {
-    background: #4A90E2;
-    color: #fff;
+    background: #005A8D; /* Bleu profond */
+    color: #ffffff;
     padding: 60px 0;
     text-align: center;
-    height: 100vh; /* Prendre toute la hauteur de l'écran */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 header h1 {
     font-size: 2.5em;
     margin: 0;
+    color: #A7E0FF; /* Cyan clair */
 }
 
 header p {
     font-size: 1.2em;
+    color: #F8F8F8; /* Blanc cassé */
 }
 
-/* Styles pour les sections */
-.section {
-    height: 100vh; /* Prendre toute la hauteur de l'écran */
-    text-align: center;
-    transition: background 0.3s ease; /* Transition douce pour l'arrière-plan */
+/* ========== 4. PRÉSENTATION ========== */
+
+#presentation {
+    background: #f4f4f4; /* Fond gris clair */
+    color: #333;
+    padding: 50px 20px;
 }
 
-/* Couleurs pour chaque section */
+#presentation h2 {
+    color: #005A8D;
+}
+
+#presentation p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+#presentation .intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    text-align: left;
+}
+
+#presentation .photo-logo {
+    border-radius: 50%;
+    border: 3px solid #005A8D; /* Bordure bleue */
+    width: 150px;
+    height: 150px;
+}
+
+/* ========== 5. À PROPOS ========== */
+
 #about {
     background: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
 }
 
-#projects {
-    background: #ffffff;
+#about h2 {
+    font-size: 2.5em;
+    color: #005A8D; /* Bleu profond */
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
 }
+
+#about h2::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 4px;
+    background: #A7E0FF; /* Cyan clair */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+#about p {
+    max-width: 800px;
+    margin: 20px auto;
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #333;
+    text-align: justify;
+}
+
+/* ========== 6. SECTIONS GÉNÉRALES ========== */
+
+.section {
+    min-height: 100vh; /* Force chaque section à prendre toute la hauteur de l'écran */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section h2 {
+    font-size: 2.5em;
+    color: #005A8D; /* Bleu profond */
+    text-align: center; /* Centre le texte */
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.section h2::after {
+    content: "";
+    display: block;
+    width: 100px; /* Largeur fixe de la barre */
+    height: 4px;
+    background: #A7E0FF; /* Cyan clair */
+    margin: 8px auto 0; /* Centre la barre sous le texte */
+    border-radius: 2px;
+}
+
+/* ========== 7. PROJETS ========== */
+/* Section Projets */
+#projects {
+    background-color: #f4f4f4;
+    padding: 30px 0;
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Conteneur avec défilement horizontal */
+.projects-container {
+    overflow-x: auto; /* Permet le défilement horizontal */
+    padding: 10px 0;
+    white-space: nowrap; /* Empêche les éléments de revenir à la ligne */
+    max-width: 100%; /* Limite la largeur du conteneur */
+}
+
+.projects-list {
+    display: flex; /* Aligne les éléments horizontalement */
+    gap: 20px; /* Réduit l'espace entre les projets */
+    flex-wrap: nowrap; /* Empêche les éléments de revenir à la ligne */
+    justify-content: flex-start; /* Permet de faire défiler les projets de gauche à droite */
+}
+
+/* Style de chaque projet */
+.project-item {
+    flex: 0 0 auto; /* Ne permet pas de réduire ou d'élargir les éléments */
+    width: 20%; /* Réduit la largeur à 25% pour afficher plus de projets à la fois */
+    height: auto; /* Hauteur automatique pour permettre au texte de s'ajuster */
+    text-align: left;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 3px; /* Réduit l'espace à l'intérieur du projet */
+    font-size: 0.9rem; /* Réduit la taille du texte */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligne le contenu au sommet */
+    margin-bottom: 10px; /* Espace sous chaque projet */
+}
+
+/* Ajustement des titres et du texte pour plus de compacité */
+.project-item h3 {
+    font-size: 1.2rem; /* Réduit la taille du titre */
+    margin-bottom: 10px;
+    word-wrap: break-word; /* Permet au texte de se couper correctement et de ne pas déborder */
+    white-space: normal; /* Permet au texte de se diviser en plusieurs lignes si nécessaire */
+}
+
+.project-item p {
+    font-size: 0.9rem; /* Réduit la taille du texte descriptif */
+    margin-bottom: 10px;
+    word-wrap: break-word; /* Permet au texte de se couper correctement et de ne pas déborder */
+    white-space: normal; /* Permet au texte de se diviser en plusieurs lignes si nécessaire */
+}
+
+/* Ajustement du bouton */
+.btn-view {
+    font-size: 0.9rem; /* Réduit la taille du bouton */
+    padding: 6px 12px;
+}
+
+
+
+.btn-view:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Réactivité mobile */
+@media (max-width: 768px) {
+    #projects h2 {
+        font-size: 1.8rem;
+    }
+
+    .project-item {
+        width: 80%; /* Réduit la largeur des projets pour les petits écrans */
+        height: auto; /* Ajuste la hauteur des projets sur petits écrans */
+    }
+
+    .btn-view {
+        padding: 6px 12px; /* Ajuste la taille du bouton pour les petits écrans */
+    }
+}
+
+
+
+/* ========== 8. COMPÉTENCES ========== */
 
 #skills {
-    background: #f9f9f9;
+    background: #f4f4f4;
+    padding: 60px 20px;
+    text-align: center;
 }
 
-/* Styles pour les titres */
-.section h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #4A90E2;
+#skills h2 {
+    font-size: 2.5em;
+    color: #005A8D;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
 }
 
-/* Styles pour les cartes de projet */
-.projects-grid {
+#skills h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #A7E0FF;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.skills-list {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
 }
 
-.project-card {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 20px;
-    margin: 20px;
-    flex-basis: calc(30% - 40px); /* 3 cartes par ligne */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+.skill-item {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease;
 }
 
-.project-card:hover {
+.skill-item:hover {
     transform: translateY(-5px);
 }
 
-/* Styles pour les listes de compétences */
-ul {
-    list-style-type: none;
-    padding: 0;
+.skill-item i {
+    font-size: 40px;
+    color: #005A8D;
+    margin-bottom: 10px;
 }
 
-ul li {
-    padding: 10px 0;
-    font-size: 1.2em;
+.skill-item p {
+    font-size: 1.1em;
+    color: #333;
+    font-weight: bold;
 }
 
-/* Styles pour le pied de page */
-footer {
-    background: #4A90E2;
-    color: #fff;
+
+/* ========== 9. VEILLE TECHNOLOGIQUE ========== */
+
+#veille {
+    padding: 40px 20px;
+    background: #f4f4f4;
+    color: #333;
+}
+
+#veille h2 {
+    color: #005A8D;
+    font-size: 2.2em;
     text-align: center;
-    padding: 20px 0;
+    margin-bottom: 20px;
 }
 
-/* Styles pour le bouton "Haut" */
-#scrollTopBtn {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: #4A90E2;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    display: none; /* Cacher par défaut */
-}
-
-#scrollTopBtn:hover {
-    background: #357ABD;
-}
-
-/* Section Veille Technologique */
-#veille-techno .articles {
+#veille .articles {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-around;
+    gap: 15px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
 }
 
 .article-card {
-    width: 300px;
+    display: flex;
+    align-items: center; /* Aligne l'image et le texte */
+    width: 500px; /* Taille fixe */
+    max-width: 90%;
+    height: auto;
     border: 1px solid #ddd;
     border-radius: 8px;
-    overflow: hidden;
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    padding: 10px;
 }
 
 .article-card:hover {
     transform: translateY(-5px);
 }
 
-.article-link {
-    text-decoration: none;
-    color: #333;
+/* Image à gauche */
+.article-card img {
+    width: 120px; /* Taille réduite */
+    height: auto;
+    border-radius: 5px;
+    margin-right: 15px; /* Espacement avec le texte */
 }
 
-.article-img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
+/* Texte à droite */
+.article-card .article-content {
+    flex-grow: 1; /* Le texte prend tout l’espace restant */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .article-card h3 {
-    margin: 15px;
+    margin: 0;
     font-size: 1.2em;
-    color: #333;
+    color: #005A8D;
 }
 
 .article-card p {
-    margin: 0 15px 15px;
-    color: #666;
+    margin: 5px 0 10px;
+    font-size: 1em;
+    color: #333;
+    max-height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Affiche max 4 lignes */
+    -webkit-box-orient: vertical;
+}
+
+/* Bouton "Lire plus" */
+.article-card .read-more {
+    text-align: left;
+    padding: 5px 0;
+    color: #005A8D;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.article-card .read-more:hover {
+    text-decoration: underline;
+}
+
+/* Responsive pour mobile */
+@media (max-width: 768px) {
+    .article-card {
+        flex-direction: column; /* Image au-dessus du texte */
+        width: 100%;
+    }
+
+    .article-card img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .article-card p {
+        -webkit-line-clamp: 3; /* Moins de texte sur mobile */
+    }
+}
+
+/* Section Tableau */
+#Tableau {
+    background-color: #fff;
+    padding: 15px; /* Réduit le padding global */
+    margin: 10px 0; /* Réduit les marges */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 100%; /* Limite la largeur à 100% de l'écran */
+    overflow-x: auto; /* Permet le défilement horizontal si nécessaire */
+}
+
+/* Titre de la section Tableau */
+#Tableau h2 {
+    font-size: 1.4em; /* Réduit la taille du titre */
+    color: #333;
+    margin-bottom: 15px; /* Réduit l'espace sous le titre */
+    text-align: center;
+}
+
+/* Tableau */
+#Tableau table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px; /* Réduit l'espace au-dessus du tableau */
+    font-size: 0.8em; /* Réduit la taille de la police dans le tableau */
+}
+
+/* Cellules du tableau */
+#Tableau th, #Tableau td {
+    padding: 6px 10px; /* Réduit les espacements dans les cellules */
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+/* Entête du tableau */
+#Tableau th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+/* Contenu des cellules */
+#Tableau td {
+    background-color: #fafafa;
+}
+
+/* Aligner le texte au centre pour th et td */
+#Tableau td, #Tableau th {
+    text-align: center;
+}
+
+/* Style pour les lignes paires */
+#Tableau tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+/* Style pour les cellules qui prennent plusieurs colonnes */
+#Tableau td[colspan="8"] {
+    font-weight: bold;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+/* Bouton dans le tableau */
+#Tableau .btn-view {
+    text-decoration: none;
+    color: #fff;
+    background-color: #4CAF50;
+    padding: 8px 12px; /* Réduit la taille du bouton */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#Tableau .btn-view:hover {
+    background-color: #45a049;
+}
+
+/* Réactivité mobile */
+@media (max-width: 768px) {
+    /* Réduit encore plus la taille de la police et les espacements dans le tableau */
+    #Tableau table {
+        font-size: 0.75em;
+    }
+
+    /* Ajuste les espacements des cellules pour les petits écrans */
+    #Tableau th, #Tableau td {
+        padding: 5px 8px;
+    }
+
+    /* Réduit l'espace global du tableau */
+    #Tableau {
+        padding: 10px;
+    }
+
+    #Tableau h2 {
+        font-size: 1.2em; /* Réduit la taille du titre sur les petits écrans */
+    }
+}
+
+
+/* Section Contact */
+#contact {
+    background-color: #f4f4f4;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#contact label {
+    font-size: 1.1em;
+    color: #555;
+}
+
+#contact input, #contact textarea {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#contact textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+#contact button {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact button:hover {
+    background-color: #45a049;
+}
+
+#contact .btn-view {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #4CAF50;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#contact .btn-view:hover {
+    background-color: #45a049;
+}
+
+
+
+/* ========== 10. PIED DE PAGE ========== */
+/* Section Footer */
+footer {
+    background-color: #005A8D; /* Bleu foncé pour le fond */
+    color: #fff; /* Texte en blanc pour contraster avec le bleu */
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+/* Liste des liens */
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #d1d1d1; /* Gris clair pour les liens */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ffeb3b; /* Jaune vif au survol pour un bon contraste */
+}
+
+footer a:focus {
+    outline: none;
+    color: #ffeb3b; /* Jaune vif au focus également */
+}
+
+
+/* ========== 11. BOUTON RETOUR EN HAUT ========== */
+
+#scrollTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #005A8D;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+#scrollTopBtn:hover {
+    background: #003d5b;
 }

@@ -1,4 +1,6 @@
 <?php
+
+
 // Démarrer la session si nécessaire
 session_start();
 
