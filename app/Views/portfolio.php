@@ -37,14 +37,14 @@
         <p>Vous pouvez consulter mes travaux sur :</p>
         <ul>
             <li><a href="https://www.linkedin.com/in/victoria-dubuc">LinkedIn</a></li>
-            <li><a href="https://github.com/victoriadubuc">GitHub</a></li>
+            <li><a href="https://github.com/Yukina20">GitHub</a></li>
         </ul>
     </div>
 </section>
 
 <section id="about" class="section">
     <h2>À propos</h2>
-    <p>Je suis actuellement en dernière année de BTS SIO (Services Informatiques aux Organisations) et j'ai acquis des compétences solides dans le développement web (PHP, MySQL, HTML, CSS) et la gestion de bases de données. Lors de mon premier stage, j'ai eu l'opportunité de développer une application de prévention pour les jeunes conducteurs concernant les risques liés à l'alcool. Actuellement, je suis en stage pour la création d'un quiz de prévention contre les risques sonores, un projet que je trouve particulièrement intéressant et utile pour la sensibilisation.</p>
+    <p>Je suis actuellement en dernière année de BTS SIO (Services Informatiques aux Organisations) et j'ai acquis des compétences solides dans le développement web (PHP, MySQL, HTML, CSS) et la gestion de bases de données. Lors de mon premier stage, j'ai eu l'opportunité de développer une application de prévention pour les jeunes conducteurs concernant les risques liés à l'alcool. Au second stage j'ai travaillé sur la création d'un quiz de prévention contre les risques sonores, un projet que je trouve particulièrement intéressant et utile pour la sensibilisation.</p>
     <p>Je suis particulièrement passionnée par le développement d'applications, la création de sites web interactifs et le développement de jeux vidéo. J'aime relever des défis techniques et apprendre de nouvelles technologies.</p>
 </section>
 
